@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="custObj" class="com.sperdian.dependencyInjection.Customer">
+	<property name="custId" value="101"></property>
+	<property name="custName" value="stevey"></property>
+	<property name="emailId" value="stevey@gmail.com"></property>
+	<property name="contactNo" value="8989999999"></property>
+	</bean> 
+	
+	<bean id="membershipObj2" class="com.sperdian.dependencyInjection.MemberShip"> 
+	<constructor-arg value="121" type="int" index="0"></constructor-arg>
+	<constructor-arg value="Gold" index="1"></constructor-arg>
+	<constructor-arg value="20" type="int" index="2"></constructor-arg>
+	<constructor-arg ref="custObj" index="3"></constructor-arg>
+	</bean>        
+ 	
+</beans>
