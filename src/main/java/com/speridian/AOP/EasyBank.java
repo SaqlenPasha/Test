@@ -8,6 +8,7 @@ public class EasyBank {
 	private int pinCode;
 	private int balance;
 	private int tempPin;
+	int price;
 	public int getPinCode() {
 		return pinCode;
 	}
